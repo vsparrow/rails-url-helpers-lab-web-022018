@@ -1,0 +1,12 @@
+
+Activate student <br>
+Student name: <%= @student.to_s%>
+<form class="" action="/students/:id/activate" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <% if @student.active == false %>
+    <%= "Active is false"%>
+  <% else %>
+    <%= "Active is true"%>
+
+  <% end %>
+</form>
